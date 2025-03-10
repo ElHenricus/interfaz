@@ -1,0 +1,46 @@
+========================================================================
+========================================================================
+
+TECNOLÓGICO NACIONAL DE MÉXICO
+INSTITUTO TECNOLÓGICO DE TIJUANA
+
+SUBDIRECCIÓN ACADÉMICA
+DEPARTAMENTO DE SISTEMAS Y COMPUTACIÓN
+
+SEMESTRE:
+Enero - Junio 2025
+
+CARRERA:
+Ingeniería en Sistemas Computacionales
+
+MATERIA:
+Lenguajes de interfaz
+
+TÍTULO ACTIVIDAD:
+Multiplicación por sumas sucesivas con valores de memoria.
+
+NOMBRE Y NÚMERO DE CONTROL:
+BARAJAS CARPIO ENRIQUE ~ 23210547
+
+NOMBRE DEL MAESTRO (A):
+René Solis Reyes
+
+========================================================================
+========================================================================
+
+
+; Cargar los valores iniciales
+mva #2     ; Ra = valor1 (2)
+mvb #3     ; Rb = valor2 (3)
+
+clr Rc     ; Limpiar Rc (resultado = 0)
+
+.loop:
+    add Rc  ; Rc = Rc + Ra (sumamos valor1 al resultado)
+    dec Rb  ; Restamos 1 al contador (Rb)
+    jnz .loop ; Si Rb no es cero, continuar
+
+; Resultado en Rc
+mvd Rc     ; Opcional: Mostrar resultado en el display (en Rd)
+
+hlt        ; Fin del programa
